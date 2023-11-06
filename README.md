@@ -195,9 +195,9 @@
 1. Pada `menu.dart` ubah bagian persis dibawah `MyHomePage({Key? key}) : super(key: key);` untuk menginisiasi warna dari tiga tombol sederhana seperti berikut.
     ```
     final List<ShopItem> items = [
-        ShopItem("Lihat Item", Icons.checklist, Colors.teal[200]!),
-        ShopItem("Tambah Item", Icons.add_shopping_cart, Colors.teal[400]!),
-        ShopItem("Logout", Icons.logout, Colors.teal[600]!),
+        ShopItem("Lihat Item", Icons.checklist, Colors.amber[300]!),
+        ShopItem("Tambah Item", Icons.add_shopping_cart, Colors.amber[600]!),
+        ShopItem("Logout", Icons.logout, Colors.lightBlue[200]!),
     ];
     ```
 2. Masih di file yang sama, tambahkan kode bagian `classShopItem` jadi seperti berikut.

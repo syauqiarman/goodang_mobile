@@ -4,9 +4,9 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
 
   final List<ShopItem> items = [
-    ShopItem("Lihat Item", Icons.checklist, Colors.teal[200]!),
-    ShopItem("Tambah Item", Icons.add_shopping_cart, Colors.teal[400]!),
-    ShopItem("Logout", Icons.logout, Colors.teal[600]!),
+    ShopItem("Lihat Item", Icons.checklist, Colors.amber[300]!),
+    ShopItem("Tambah Item", Icons.add_shopping_cart, Colors.amber[600]!),
+    ShopItem("Logout", Icons.logout, Colors.lightBlue[200]!),
   ];
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -22,8 +22,13 @@ class MyHomePage extends StatelessWidget {
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.lightBlue[900],
           title: const Text(
             'Goodang',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.white
+            )
           ),
         ),
         body: SingleChildScrollView(
