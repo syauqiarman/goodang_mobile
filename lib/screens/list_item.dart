@@ -17,24 +17,24 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
     Future<List<Item>> fetchProduct(CookieRequest request) async {
     // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
-    // final response = await request.postJson(
-    //                             "http://127.0.0.1:8000/get-item/",
-    //                             jsonEncode(<String, String>{
-    //                                 'name':'bait',
-    //                             }));
-    var url = Uri.parse(
-        'http://127.0.0.1:8000/json/');
-    var response = await http.get(
-        url,
-        headers: {"Content-Type": "application/json"},
-    );
+    final response = await request.postJson(
+                                "http://127.0.0.1:8000/get-item/",
+                                jsonEncode(<String, String>{
+                                    'name':'bait',
+                                }));
+    // var url = Uri.parse(
+    //     'http://127.0.0.1:8000/json/');
+    // var response = await http.get(
+    //     url,
+    //     headers: {"Content-Type": "application/json"},
+    // );
 
     // melakukan decode response menjadi bentuk json
-    var data = jsonDecode(utf8.decode(response.bodyBytes));
+    //var data = jsonDecode(utf8.decode(response.bodyBytes));
 
     // melakukan konversi data json menjadi object Product
     List<Item> list_product = [];
-    for (var d in data) {
+    for (var d in response) {
         if (d != null) {
             list_product.add(Item.fromJson(d));
         }
